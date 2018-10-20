@@ -1,0 +1,9 @@
+﻿{
+  "Id": "exund.colorblock",
+  "DisplayName": "Color Block",
+  "Author": "Exund",
+  "Version": "1.0.0",
+  "Enable": true,
+  "AssemblyName": "Exund.ColorBlock.dll",
+  "EntryMethod": "Exund.ColorBlock.ColorBlockMod.Load"
+}
