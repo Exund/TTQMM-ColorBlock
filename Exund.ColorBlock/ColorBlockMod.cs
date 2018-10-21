@@ -29,7 +29,7 @@ namespace Exund.ColorBlock
             var color_block = new BlockPrefabBuilder()
                 .SetBlockID(7000, "64965b4027b723b16d1c")
                 .SetName("Color Block")
-                .SetDescription("A block that can change color")
+                .SetDescription("A block that can change color (right click to edit)")
                 .SetFaction(FactionSubTypes.SPE)
                 .SetCategory(BlockCategories.Standard)
                 .SetGrade()
@@ -37,6 +37,7 @@ namespace Exund.ColorBlock
                 .SetMass(1)
                 .SetModel(cube.GetComponent<MeshFilter>().sharedMesh, cube.GetComponent<MeshFilter>().sharedMesh, true, cube.GetComponent<MeshRenderer>().material)
                 .SetSize(IntVector3.one,BlockPrefabBuilder.AttachmentPoints.All)
+                .SetIcon(GameObjectJSON.SpriteFromImage(GameObjectJSON.ImageFromFile("colorblock_icon.png")))
                 .AddComponent<ModuleColor>();
             color_block.RegisterLater();
 
