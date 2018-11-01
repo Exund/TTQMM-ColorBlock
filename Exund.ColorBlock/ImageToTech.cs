@@ -78,7 +78,7 @@ namespace Exund.ColorBlock
             scrollPos = GUILayout.BeginScrollView(scrollPos);
             foreach (var image in Directory.GetFiles(Path.GetFullPath(ColorBlockMod.TechArtFolder), "*.png"))
             {
-                if (GUILayout.Button(image, new GUIStyle(GUI.skin.button) { richText = true, alignment = TextAnchor.MiddleLeft }))
+                if (GUILayout.Button(Path.GetFileNameWithoutExtension(image), new GUIStyle(GUI.skin.button) { richText = true, alignment = TextAnchor.MiddleLeft }))
                 {
                     path = image;
                 }

@@ -17,7 +17,7 @@ namespace Exund.ColorBlock
         {
             _holder = new GameObject();
             _holder.AddComponent<ImageToTech>();
-            _holder.AddComponent<ChangeColor>();
+            _holder.AddComponent<ColorTools>();
             UnityEngine.Object.DontDestroyOnLoad(_holder);
 
             var t = new Texture2D(1, 1);
@@ -42,6 +42,23 @@ namespace Exund.ColorBlock
             color_block.RegisterLater();
 
             if (!Directory.Exists(TechArtFolder)) Directory.CreateDirectory(TechArtFolder);
+        }
+
+        public static Color ColorField(Color c)
+        {
+            var c2 = (Color32)c;
+            GUILayout.BeginVertical();
+            GUILayout.Label("Red : " + c2.r);
+            c2.r = (byte)GUILayout.HorizontalSlider(c2.r, 0f, 255f);
+
+            GUILayout.Label("Green : " + c2.g);
+            c2.g = (byte)GUILayout.HorizontalSlider(c2.g, 0f, 255f);
+
+            GUILayout.Label("Blue : " + c2.b);
+            c2.b = (byte)GUILayout.HorizontalSlider(c2.b, 0f, 255f);
+            GUILayout.EndVertical();
+
+            return c2;
         }
     }
 }

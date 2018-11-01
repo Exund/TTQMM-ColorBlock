@@ -83,7 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangeColor.cs" />
+    <Compile Include="ColorTools.cs" />
     <Compile Include="ColorBlockMod.cs" />
     <Compile Include="ImageToTech.cs" />
     <Compile Include="ModuleColor.cs" />
